@@ -3,7 +3,7 @@ import hre, { ethers } from "hardhat";
 const network = hre.network.name;
 const fs = require('fs');
 const dotenv = require('dotenv');
-const envConfig = dotenv.parse(fs.readFileSync(`q.env`))
+const envConfig = dotenv.parse(fs.readFileSync())
 for (const k in envConfig) {
     process.env[k] = envConfig[k]
 }
